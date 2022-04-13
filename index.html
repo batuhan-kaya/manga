@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read Manga</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="flipbook-viewport">
+      <h1 class="title">FULL METAL ALCHEMIST</h1>
+      <h2 class="suptitle">BROTHERHOOD</h2>
+      <div class="container">
+        <div id="pages" class="flipbook">
+          <!-- <div style="background-image: url(./pages/1.png)"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/jquery.min.1.7.js"></script>
+    <script src="./js/modernizr.2.5.3.min.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+      function loadApp() {
+        // Create the flipbook
+        $(".flipbook").turn({
+          // Width
+          width: 986,
+
+          // Height
+          height: 740,
+
+          // Elevation
+          elevation: 50,
+
+          // Enable gradients
+          gradients: true,
+
+          // Auto center this flipbook
+          autoCenter: true,
+        });
+      }
+
+      // Load the HTML4 version if there's not CSS transform
+
+      yepnope({
+        test: Modernizr.csstransforms,
+        yep: ["./js/turn.js"],
+        nope: ["./js/turn.html4.min.js"],
+        complete: loadApp,
+      });
+    </script>
+  </body>
+</html>

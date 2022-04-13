@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Righteous", cursive;
+  background-image: url(./image/backgroundfma.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Basic sample */
+
+.title,
+.suptitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #1b1b1b;
+  text-shadow: 0 0 10px #575757;
+}
+
+.title {
+  font-size: 52px;
+  margin-top: 24px;
+}
+
+.flipbook-viewport {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.flipbook-viewport .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  transition: 0.3s ease-in;
+}
+
+.flipbook-viewport .flipbook {
+  width: 986px;
+  height: 740px;
+  left: -493px;
+  top: -320px;
+  transition: 0.3s ease-in;
+}
+
+.flipbook-viewport .page {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.flipbook .page {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.flipbook-viewport .page img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+}
